@@ -9,5 +9,8 @@ public class eMain {
         System.out.println(e1.toString());
         System.out.println(e2.toString());
         System.out.println(e3.toString());
+        System.out.println(e3.birthYear());
+        System.out.println(e3.birthMonth());
+        System.out.println(e3.birthDay());
     }
 }
