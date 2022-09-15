@@ -1,5 +1,7 @@
 package hu.petrik.oop.EmberekOOP;
 
+import java.util.Date;
+
 public class Ember {
     private String name;
     private String birthDate;
@@ -16,6 +18,22 @@ public class Ember {
         return "Név: " + name +
                 ", Születési dátum: " + birthDate +
                 ", Születési hely: " + birthPlace;
+    }
+
+    public int birthYear()
+    {
+        int year = Integer.parseInt(birthDate.substring(0,4));
+        return year;
+    }
+    public int birthMonth()
+    {
+        int month = Integer.parseInt(birthDate.substring(5,7));
+        return month;
+    }
+    public int birthDay()
+    {
+        int day = Integer.parseInt(birthDate.substring(8,10));
+        return day;
     }
 
 
