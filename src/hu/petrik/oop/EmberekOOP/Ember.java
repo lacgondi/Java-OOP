@@ -11,5 +11,12 @@ public class Ember {
         this.birthPlace = birthPlace;
     }
 
+    @Override
+    public String toString() {
+        return "Név: " + name +
+                ", Születési dátum: " + birthDate +
+                ", Születési hely: " + birthPlace;
+    }
+
 
 }
