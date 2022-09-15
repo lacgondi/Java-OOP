@@ -24,5 +24,36 @@ public class pont {
         this.y= rand.ints(n*-1, n).findFirst().getAsInt();
     }
 
-    public
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String valuesToString()
+    {
+        return "Az x koordináta: "+x+", az y koordináta: "+y;
+    }
+
+    public String distanceFromZero()
+    {
+        int distanceX=x;
+        int distanceY=y;
+
+        if(x < 0)
+        {
+            distanceX *= -1;
+        }
+        if(y < 0)
+        {
+            distanceY *= -1;
+        }
+        return "Az x koordináta "+distanceX+" egységre van az origótól, az y koordináta "+distanceY+" egységere van az origótól";
+    }
+    public double distanceToAnotherPoint(pont p2)
+    {
+        return Math.sqrt(Math.pow((p2.x-x), 2) + Math.pow((p2.y-y),2));
+    }
 }
