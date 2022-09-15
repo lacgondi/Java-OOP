@@ -1,6 +1,9 @@
 package hu.petrik.oop.EmberekOOP;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
+import java.util.Locale;
 
 public class Ember {
     private String name;
@@ -34,6 +37,14 @@ public class Ember {
     {
         int day = Integer.parseInt(birthDate.substring(8,10));
         return day;
+    }
+    public int currentAge()
+    {
+        int age;
+        LocalDate currentDate = LocalDate.now();
+        double ageDecimal = (currentDate.getYear() - birthYear()) + ((currentDate.getMonth() - birthMonth())/12) + ((currentDate.getDay() - birthDay())/30);
+        age = (int) ageDecimal;
+        return age;
     }
 
 
