@@ -33,14 +33,28 @@ public class Main {
         Kor k10 = new Kor(77);
         System.out.println(k1.circumference());
         System.out.println(k2.area());
-        System.out.println(k3.data());
-        System.out.println(k4.data());
-        System.out.println(k5.data());
-        System.out.println(k6.data());
-        System.out.println(k7.data());
-        System.out.println(k8.data());
-        System.out.println(k9.data());
-        System.out.println(k10.data());
+        System.out.println(k3.toString());
+        System.out.println(k4.toString());
+        System.out.println(k5.toString());
+        System.out.println(k6.toString());
+        System.out.println(k7.toString());
+        System.out.println(k8.toString());
+        System.out.println(k9.toString());
+        System.out.println(k10.toString());
+        Kor[] korArr= new Kor[]{k1,k2,k3,k4,k5,k6,k7,k8,k9,k10};
+        double max = Double.MIN_VALUE;
+        for (int i = 0; i < korArr.length; i++) {
+            if(korArr[i].area()>max)
+            {
+                max = korArr[i].area();
+            }
+        }
+        for (int i = 0; i < korArr.length; i++) {
+            if(korArr[i].area() == max)
+            {
+                System.out.println("A legnagyobb kör adatai: "+korArr[i].toString());
+            }
+        }
 
 
     }
