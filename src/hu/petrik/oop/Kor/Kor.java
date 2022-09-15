@@ -31,8 +31,9 @@ public class Kor {
         this.r = r;
     }
 
-    public String data()
+    @Override
+    public String toString()
     {
-        return x+", "+y+", "+r;
+        return "("+ x+", "+y+", "+r+")";
     }
 }
