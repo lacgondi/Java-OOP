@@ -56,4 +56,27 @@ public class pont {
     {
         return Math.sqrt(Math.pow((p2.x-x), 2) + Math.pow((p2.y-y),2));
     }
+
+    public int quadrant()
+    {
+        if(x > 0 && y > 0)
+        {
+            return 1;
+        }
+        else if(x < 0 && y > 0)
+        {
+            return 2;
+        }
+        else if(x < 0 && y < 0)
+        {
+            return 3;
+        }
+        else if(x > 0 && y < 0)
+        {
+            return 4;
+        }
+        else{
+            return 0;
+        }
+    }
 }
