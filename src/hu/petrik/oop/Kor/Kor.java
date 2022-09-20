@@ -5,6 +5,13 @@ public class Kor {
     private int y;
     private double r;
 
+    public Kor()
+    {
+        this.x = (int)(Math.random()*100);
+        this.y = (int)(Math.random()*100);
+        this.r = (Math.random()*100)+1;
+    }
+
     public Kor(int x, int y, double r) {
         this.x = x;
         this.y = y;
